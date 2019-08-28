@@ -418,13 +418,70 @@ int main(void) {
       glEnd();
 
       // --------------------------------------------------- Huruf D -------------------------------
-      // Lingkaran Doloe
+      // Lingkaran Biru
+      glBegin(GL_POLYGON);
+      for(int i = 0; i <= 90; i++){
+        theta = i * 3.14 / 180;
+        glVertex2d(560 + 30 * cos(theta), 370 + 30 * sin(theta));
+      }
+      glVertex2d(560, 370);
+      glEnd();
+
       glBegin(GL_POLYGON);
       for(int i = 270; i <= 360; i++){
         theta = i * 3.14 / 180;
         glVertex2d(560 + 30 * cos(theta), 370 + 30 * sin(theta));
       }
       glVertex2d(560, 370);
+      glEnd();
+      // Lingkaran Abu
+      glBegin(GL_POLYGON);
+      for(int i = 0; i <= 90; i++){
+        glColor3ub(248,248,248);
+        theta = i * 3.14 / 180;
+        glVertex2d(560 + 20 * cos(theta), 370 + 20 * sin(theta));
+      }
+      glVertex2d(560, 370);
+      glEnd();
+
+      glBegin(GL_POLYGON);
+      for(int i = 270; i <= 360; i++){
+        glColor3ub(248,248,248);
+        theta = i * 3.14 / 180;
+        glVertex2d(560 + 20 * cos(theta), 370 + 20 * sin(theta));
+      }
+      glVertex2d(560, 370);
+      glEnd();
+      // Garis Datar 1
+      glBegin(GL_POLYGON);
+      glColor3ub(41,52,98);
+      glVertex2d(550, 340);
+      glColor3ub(41,52,98);
+      glVertex2d(550, 350);
+      glColor3ub(41,52,98);
+      glVertex2d(560, 350);
+      glColor3ub(41,52,98);
+      glVertex2d(560, 340);
+      glEnd();
+      // Garis Datar 2
+      glBegin(GL_POLYGON);
+      glVertex2d(550, 390);
+      glColor3ub(41,52,98);
+      glVertex2d(550, 400);
+      glColor3ub(41,52,98);
+      glVertex2d(560, 400);
+      glColor3ub(41,52,98);
+      glVertex2d(560, 390);
+      glEnd();
+      // Garis Tegak 3
+      glBegin(GL_POLYGON);
+      glVertex2d(540, 340);
+      glColor3ub(41,52,98);
+      glVertex2d(540, 400);
+      glColor3ub(41,52,98);
+      glVertex2d(550, 400);
+      glColor3ub(41,52,98);
+      glVertex2d(550, 340);
       glEnd();
 
       glfwSwapBuffers(window);
