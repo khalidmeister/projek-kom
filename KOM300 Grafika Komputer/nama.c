@@ -419,12 +419,13 @@ int main(void) {
 
       // --------------------------------------------------- Huruf D -------------------------------
       // Lingkaran Doloe
-      /*glBegin(GL_POLYGON);
-      for(int i = 360; i < 540; i++){
+      glBegin(GL_POLYGON);
+      for(int i = 270; i <= 360; i++){
         theta = i * 3.14 / 180;
         glVertex2d(560 + 30 * cos(theta), 370 + 30 * sin(theta));
       }
-      glEnd();*/
+      glVertex2d(560, 370);
+      glEnd();
 
       glfwSwapBuffers(window);
       glfwPollEvents();
